@@ -27,23 +27,58 @@
     </header>
     <main>
         <!--Фильтры-->
-        <h3>стоимость:</h3>
-        <span>ОТ 0</span>
-        <span>ДО 15000</span>
+        <section>
+            <h3>стоимость:</h3>
+            <span>ОТ 0</span>
+            <span>ДО 15000</span>
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <fieldset>
+                    <legend>Сетка:</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="value-grid" value="adaptive" id="filter-adaptive" checked>
+                        <label for="filter-adaptive">Адаптивная</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="value-grid" value="fixed" id="filter-fixed">
+                        <label for="filter-fixed">Фиксированная</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="value-grid" value="rubber" id="filter-rubberr">
+                        <label for="filter-rubber">Резиновая</label>
+                    </li>
+                </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>ОСОБЕННОСТИ:</legend>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="slide" id="filter-slide" checked>
+                            <label for="filter-slide">Слайдер</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="block-advantages" id="filter-block-advantages">
+                            <label for="filter-block-advantages">Блок преимуществ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="news" id="filter-news" checked>
+                            <label for="">Новости</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gallery" id="filter-gallery">
+                            <label for="filter-gallery">Галерея</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="basket" id="filter-basket">
+                            <label for="filter-basket">Корзина</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button type="submit">ПОКАЗАТЬ</button>
+            </form>
+        </section>
 
-        <h3>сетка:</h3>
-        <span>Адаптивная</span>
-        <span>Фиксированная</span>
-        <span>Резиновая</span>
-        <h3>особенности:</h3>
-        <span>Слайдер</span>
-        <span>Блок преемуществ</span>
-        <span>Новости</span>
-        <span>Галерея</span>
-        <span>Корзина</span>
-        <button type="button">показать</button>
         <!-- Фильтры -->
-
         <h3>сортировать:</h3>
         <ul>
             <li><a href="#">По цене</a></li>
@@ -54,16 +89,16 @@
         </ul>
         <ul>
             <li>
-                <img src="img/img-sedona.jpg" alt="сайт SEDONA" width="360" height="576">
+                <img src="img/img-sedona.jpg" alt="Скриншот сайта SEDONA" width="360" height="576">
                 <h3><a href="#">Sedona</a></h3>
                 <p>Информационный сайт для туристов</p>
                 <button type="button">9 900 руб.</button>
             </li>
-            <li><img src="img/img-pink.jpg" alt="Сайт приложения Pink" width="360" height="576"></li>
-            <li><img src="img/img-barbershop.jpg" alt="Сайт BORODINSKI" width="360" height="576"></li>
-            <li><img src="img/img-mishka.jpg" alt="Cайт MISHKA" width="360" height="576"></li>
-            <li><img src="img/img-aplus.jpg" alt="Cайт Aplus" width="360" height="576"></li>
-            <li><img src="img/img-kvast.jpg" alt="Cайт КВАСТ" width="360" height="576"></li>
+            <li><img src="img/img-pink.jpg" alt="Скриншот сайта Pink" width="360" height="576"></li>
+            <li><img src="img/img-barbershop.jpg" alt="Скриншот сайта BORODINSKI" width="360" height="576"></li>
+            <li><img src="img/img-mishka.jpg" alt="Скриншот сайта MISHKA" width="360" height="576"></li>
+            <li><img src="img/img-aplus.jpg" alt="Скриншот сайта Aplus" width="360" height="576"></li>
+            <li><img src="img/img-kvast.jpg" alt="Скриншот сайта КВАСТ" width="360" height="576"></li>
         </ul>
 
         <ul>
@@ -75,10 +110,9 @@
 
     </main>
     <footer>
-
         <section>
-            <img src="img/map.jpg" alt="" width="1440" height="416">
-            <img src="map-marker.svg" alt="Адрес дизайн-студии «Нёрдс»">
+            <img src="img/map.jpg" alt="Карта" width="1440" height="416">
+            <img src="map-marker.svg" alt="Метка на карте дизайн-студии «Нёрдс»:Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
             <h3>NЁRDS DESIGN STUDIO</h3>
             <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <p>тел. +7 (812) 275-75-75</p>
