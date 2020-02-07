@@ -102,7 +102,7 @@ a {
 
 /* header */
 
-header {
+.main-header {
     background-color: #eeeeee;
 }
 
@@ -151,15 +151,15 @@ header {
 
 /* slider */
 
-.slider div:nth-of-type(1) {
+.slider-item-1 {
     background: url(/img/slide-picture-1.png) no-repeat;
 }
 
-.slider div:nth-of-type(2) {
+.slider-item-2 {
     background: url(/img/slide-picture-2.png) no-repeat;
 }
 
-.slider div:nth-of-type(3) {
+.slider-item-3 {
     background: url(/img/slide-picture-3.png) no-repeat;
 }
 
@@ -329,8 +329,8 @@ header {
     border: solid 2px #000000;
 }
 
-.feedback-form input[type="text"]:invalid,
-.feedback-form input[type="email"]:invalid {
+.feedback-form input[type="text"]:not(:placeholder-shown):invalid,
+.feedback-form input[type="email"]:not(:placeholder-shown):invalid {
     color: #e74246;
     border: solid 2px #e74246;
 }
