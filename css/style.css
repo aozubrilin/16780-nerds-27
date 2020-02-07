@@ -28,8 +28,9 @@ a {
 
 .btn {
     font-size: 16px;
-    line-height: 18;
+    line-height: 18px;
     font-weight: 500;
+    text-align: center;
     text-transform: uppercase;
     border: none;
 }
@@ -83,6 +84,24 @@ a {
     background-color: #e5a722;
 }
 
+.btn-grey {
+    color: #000000;
+    background-color: #eeeeee;
+}
+
+.btn-grey:hover,
+.btn-grey:focus {
+    background-color: #dfdfdf;
+}
+
+.btn-grey:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #d5d5d5;
+}
+
+
+/* header */
+
 header {
     background-color: #eeeeee;
 }
@@ -95,6 +114,9 @@ header {
 .main-header-logo:active {
     opacity: 0.3;
 }
+
+
+/* navigation */
 
 .main-navigation {
     font-size: 16px;
@@ -126,9 +148,327 @@ header {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.slider-item h2 {
+
+/* slider */
+
+.slider div:nth-of-type(1) {
+    background: url(/img/slide-picture-1.png) no-repeat;
+}
+
+.slider div:nth-of-type(2) {
+    background: url(/img/slide-picture-2.png) no-repeat;
+}
+
+.slider div:nth-of-type(3) {
+    background: url(/img/slide-picture-3.png) no-repeat;
+}
+
+.slider h2 {
     font-size: 55px;
     font-weight: 500;
     line-height: 55px;
     color: #000000;
+}
+
+
+/* features */
+
+.features h2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.features-list {
+    list-style: none;
+}
+
+
+/* advantages */
+
+.advantages h2 {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 45px;
+    color: #000000;
+}
+
+.advantages h3 {
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.advantages-list {
+    list-style: none;
+}
+
+.statistics h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.statistics-table tr:nth-child(1) {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 10px;
+    color: #000000;
+}
+
+.statistics-table tr:nth-child(2) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+
+/*partner*/
+
+.partners-list {
+    list-style: none;
+}
+
+.partners-list a {
+    opacity: 0.2;
+}
+
+.partners-list a:hover,
+.partners-list a:focus {
+    opacity: 1;
+}
+
+.partners-list a:active {
+    opacity: 0.1;
+}
+
+
+/*contacts*/
+
+.contacts h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #000000;
+}
+
+.contacts address,
+.contacts p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #666666;
+    font-style: normal;
+}
+
+
+/*social*/
+
+.social {
+    list-style: none;
+}
+
+
+/*promo*/
+
+.promo h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #000000;
+}
+
+.promo p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #444444;
+}
+
+
+/*feedback*/
+
+.feedback h2 {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 45px;
+    color: #000000;
+}
+
+.feedback label {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #000000;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(68, 68, 68, 0.5);
+    background-color: #ffffff;
+    border: solid 2px #d7dcde;
+}
+
+.feedback-form input[type="text"]:hover,
+.feedback-form input[type="email"]:hover,
+.feedback-form textarea:hover {
+    border: solid 2px #b4b9bb;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:focus {
+    color: #444444;
+    border: solid 2px #000000;
+}
+
+.feedback-form input[type="text"]:invalid,
+.feedback-form input[type="email"]:invalid {
+    color: #e74246;
+    border: solid 2px #e74246;
+}
+
+
+/*Страница catalog.html*/
+
+.catalog-heiding {
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 55px;
+    color: #000000;
+}
+
+.filter fieldset {
+    border: none;
+}
+
+.filter legend {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.filter label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #283136;
+}
+
+.filter-option,
+.filter-advantages {
+    list-style: none;
+}
+
+.filter-range {
+    line-height: 22px;
+    color: #283136;
+}
+
+.filter-price input[type="text"] {
+    background-color: #eeeeee;
+    border: none;
+}
+
+
+/*sort*/
+
+.sort h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.sort-llist li {
+    list-style: none;
+}
+
+.sort-llist a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-llist a:hover,
+.sort-llist a:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-llist a:active,
+.sort-llist a:visited {
+    color: #000000;
+}
+
+
+/*catalog*/
+
+.catalog-list {
+    list-style: none;
+}
+
+.catalog a {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.catalog a:hover,
+.catalog a:focus {
+    color: #fb565a;
+}
+
+.catalog a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog p {
+    font-size: 16px;
+    line-height: 18px;
+    color: #666666;
+}
+
+
+/*pagination*/
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-list a {
+    font-size: 13.5px;
+    line-height: 15.5px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #eeeeee;
+}
+
+.pagination-list a:visited {
+    border: solid 3px #dbdbdb;
+    background-color: #ffffff;
+}
+
+.pagination-list a:hover,
+.pagination-list a:focus {
+    background-color: #dfdfdf;
+}
+
+.pagination-list a:active {
+    color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+    background-color: #d5d5d5;
 }

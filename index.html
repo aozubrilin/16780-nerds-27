@@ -75,7 +75,7 @@
 
         <section class="advantages">
             <h2 class="visually-hidden">Наши преимущества</h2>
-            <p>Мы — маленькая, но гордая<br> дизайн-студия из Краснодара.</p>
+            <h2>Мы — маленькая, но гордая<br> дизайн-студия из Краснодара.</h2>
 
             <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br> превыше креатива. Работаем не покладая рук, как роботы.
             </p>
@@ -88,12 +88,14 @@
                 <li>Слайдшоу и видео для корпоративных презентаций</li>
             </ul>
             <img src="img/nerds-picture.png" alt="Второй логотип дизайн-студии «Нёрдс»" width="360" height="208">
-            <p>с 2004 года любим точность во всем:</p>
-            <table class="advantages-table">
+        </section>
+        <section class="statistics">
+            <h3>с 2004 года любим точность во всем:</h3>
+            <table class="statistics-table">
                 <tr>
-                    <td>146%</td>
-                    <td>100%</td>
-                    <td>50%</td>
+                    <td>146<sup>%</sup></td>
+                    <td>100<sup>%</sup></td>
+                    <td>50<sup>%</sup></td>
                 </tr>
                 <tr>
                     <td>Уровень самоотдачи</td>
@@ -108,17 +110,17 @@
             <ul class="partners-list">
                 <li>
                     <a href="https://htmlacademy.ru/intensive/htmlcss">
-                        <img src="img/logo-1.png" alt="Логотип сайта HTML Academy" width="198" height="68">
+                        <img src="img/htmlacdemy-logo.png" alt="Логотип сайта HTML Academy" width="198" height="68">
                     </a>
                 </li>
                 <li>
-                    <a href="#"><img src="img/logo-2.png" alt="Логотип сайта Barbershop Borodushkin" width="209" height="90"></a>
+                    <a href="#"><img src="img/borodinsli-logo.png" alt="Логотип сайта Barbershop Borodushkin" width="209" height="90"></a>
                 </li>
                 <li>
-                    <a href="#"><img src="img/logo-3.png" alt="Логотип сайта PINK" width="185" height="52"></a>
+                    <a href="#"><img src="img/pink-logo.png" alt="Логотип сайта PINK" width="185" height="52"></a>
                 </li>
                 <li>
-                    <a href="#"><img src="img/logo-4.png" alt="Логотип сайта MISHKA" width="173" height="84"></a>
+                    <a href="#"><img src="img/mishka-logo.png" alt="Логотип сайта MISHKA" width="173" height="84"></a>
                 </li>
             </ul>
         </section>
@@ -127,44 +129,46 @@
     <footer class="main-footer">
 
         <div class="contacts">
+            <h2 class="visually-hidden">Наше местоположение</h2>
             <img src="img/map.jpg" alt="Карта" width="1440" height="416">
             <img src="map-marker.svg" alt="Метка на карте дизайн-студии «Нёрдс»:Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
             <h3>NЁRDS DESIGN STUDIO</h3>
             <address>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             <p>тел. +7 (812) 275-75-75</p>
-            <a href="#">Напишите нам</a>
+            <a class="btn btn-red" href="#">Напишите нам</a>
         </div>
 
         <div class="footer-social">
-            <ul>
+            <ul class="social">
                 <li><a class="social-button" href="#">вконтакте</a></li>
                 <li><a class="social-button" href="#">Фейсбук</a></li>
                 <li><a class="social-button" href="#">Инстаграм</a></li>
             </ul>
         </div>
-
-        <h2>Давайте дружить!</h2>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div class="promo">
+            <h2>Давайте дружить!</h2>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
     </footer>
 
     <!--Модальное окно-->
-    <section class="modal write-us">
+    <section class="feedback">
         <h2>Напишите нам</h2>
         <button type="button">Закрыть</button>
-        <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
                 <label for="name">Ваше имя:</label>
-                <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+                <input type="text" name="name" pattern="[A-Za-z]+]" id="name" placeholder="Имя Фамилия">
             </p>
             <p>
                 <label for="email">Ваш e-mail:</label>
-                <input type="email" name="email" id="email" placeholder="email@example.com">
+                <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" placeholder="email@example.com ">
             </p>
             <p>
                 <label for="text">Текст письма:</label>
                 <textarea name="text" id="text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
             </p>
-            <button type="submit">ОТПРАВИТЬ</button>
+            <button class="btn btn-red" type="submit">ОТПРАВИТЬ</button>
         </form>
     </section>
 
