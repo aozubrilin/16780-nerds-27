@@ -1,3 +1,29 @@
+.r {
+    outline: 3px solid red;
+}
+
+.b {
+    outline: 3px solid blue;
+}
+
+.y {
+    outline: 3px solid yellow;
+}
+
+.g {
+    outline: 3px solid green;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +34,11 @@ body {
     text-align: left;
     color: #283136;
     background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -30,12 +61,16 @@ a {
 /*кнопки*/
 
 .btn {
+    display: inline-block;
+    padding: 16px 0;
+    height: 50px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
     text-align: center;
     text-transform: uppercase;
     border: none;
+    border-radius: 2px;
 }
 
 .btn:active {
@@ -102,11 +137,34 @@ a {
     background-color: #d5d5d5;
 }
 
+.btn-small {
+    width: 160px;
+    margin-top: 31px;
+}
+
+.btn-medium {
+    margin-top: 38px;
+    width: 220px;
+}
+
+.btn-big {
+    width: 240px;
+    margin-top: 25px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 
 /* header */
 
 .main-header {
     background-color: #eeeeee;
+    margin-bottom: 80px;
+    min-height: 545px;
 }
 
 .main-header-logo:hover,
@@ -122,6 +180,11 @@ a {
 /* navigation */
 
 .main-navigation {
+    display: flex;
+    padding-top: 49px;
+}
+
+.main-navigation a {
     font-size: 16px;
     line-height: 30px;
     font-weight: 500;
@@ -129,13 +192,52 @@ a {
     text-transform: uppercase;
 }
 
+.site-navigation {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 0;
+    width: 440px;
+    margin-left: 202px;
+}
+
+.cart-navigation {
+    margin-left: auto;
+}
+
 .site-navigation,
 .cart-navigation {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 26px;
     list-style: none;
+}
+
+.cart-navigation .cart-link {
+    position: relative;
+    padding-left: 50px;
+}
+
+.cart-link::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    background-image: url("/img/cart-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+a.link-activ {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #fb565a;
 }
 
 .site-navigation a,
 .cart-navigation a {
+    display: block;
     color: #000000;
 }
 
@@ -154,15 +256,51 @@ a {
 
 /* slider */
 
-.slider-item-1 {
+.slider {
+    padding-top: 22px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+.slider p {
+    padding-top: 10px;
+}
+
+.slider-item-1 h2,
+.slider-item-2 h2,
+.slider-item-3 h2 {
+    margin-bottom: 0;
+}
+
+.slider-item-1::after,
+.slider-item-2::after,
+.slider-item-3::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.slider-item-1::after {
+    width: 698px;
+    height: 413px;
+    bottom: 0px;
+    right: 51px;
     background: url(/img/slide-picture-1.png) no-repeat;
 }
 
-.slider-item-2 {
+.slider-item-2::after {
+    width: 663px;
+    height: 430px;
+    bottom: 0px;
+    right: 21px;
     background: url(/img/slide-picture-2.png) no-repeat;
 }
 
-.slider-item-3 {
+.slider-item-3::after {
+    width: 759px;
+    height: 411px;
+    bottom: 0px;
+    right: 20px;
     background: url(/img/slide-picture-3.png) no-repeat;
 }
 
@@ -176,43 +314,129 @@ a {
 
 /* features */
 
+.features {
+    padding-bottom: 80px;
+    border-bottom: 2px solid #eeeeee;
+}
+
 .features h2 {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
     color: #000000;
     text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 0px;
 }
 
 .features-list {
-    list-style: none;
+    justify-content: space-between;
+    display: flex;
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 60px;
+    list-style-type: none;
+}
+
+.features-item p {
+    margin-bottom: 0px;
+}
+
+.features-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
 }
 
 
 /* advantages */
 
-.advantages h2 {
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    padding-bottom: 75px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.about-us-advantages {
+    width: 665px;
+}
+
+.about-us-statistics {
+    width: 360px;
+    text-align: center;
+}
+
+.about-us-advantages h2 {
     font-size: 45px;
     font-weight: 500;
     line-height: 45px;
     color: #000000;
+    margin-bottom: 0;
 }
 
-.advantages h3 {
+.about-us-advantages p {
+    margin-top: 33px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #283136;
+}
+
+.about-us-advantages h3 {
+    margin-top: 39px;
+    margin-bottom: 0;
     font-weight: 700;
     color: #000000;
     text-transform: uppercase;
 }
 
 .advantages-list {
+    margin: 24px 0 0 0;
+    padding: 0;
     list-style: none;
 }
 
-.statistics h3 {
+.advantages-list li {
+    position: relative;
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #283136;
+    margin-left: 35px;
+}
+
+.advantages-list li:before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 10px;
+    width: 25px;
+    height: 2px;
+    background-color: #fb565a;
+}
+
+.about-us-statistics h3 {
+    margin-top: 32px;
     font-size: 16px;
     font-weight: 700;
     color: #000000;
     text-transform: uppercase;
+}
+
+.statistics-table {
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.statistics-table tr {
+    text-align: left;
+}
+
+.statistics-table td {
+    padding: 0;
 }
 
 .statistics-table tr:nth-child(1) {
@@ -231,9 +455,22 @@ a {
 
 /*partner*/
 
-.partners-list {
-    list-style: none;
+.partners {
+    margin-top: 45px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #eeeeee;
 }
+
+.partners-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.partners-list li {}
 
 .partners-list a {
     opacity: 0.2;
@@ -251,20 +488,45 @@ a {
 
 /*contacts*/
 
-.contacts h2 {
+.main-footer {
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 83px;
+}
+
+.main-footer img {}
+
+.map {
+    position: relative;
+}
+
+.map h2 {
     font-size: 18px;
     font-weight: 700;
     line-height: 30px;
     color: #000000;
 }
 
-.contacts address,
-.contacts p {
+.map address,
+.map p {
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
     color: #666666;
     font-style: normal;
+}
+
+.contacts {
+    position: absolute;
+    top: 50px;
+    left: 130px;
+    padding: 10px 20px;
+    z-index: 1;
+    width: 319px;
+    height: 308px;
+    background: #fff;
 }
 
 
