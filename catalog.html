@@ -34,31 +34,40 @@
             <h2 class="visually-hidden">Фильтр сайтов</h2>
             <div class="filter">
                 <form action="https://echo.htmlacademy.ru" method="get">
-                    <fieldset class="filter-price">
-                        <legend>СТОИМОСТЬ:</legend>
-                        <label class="filter-range" for="min-price">ОТ</label>
-                        <input type="text" name="min-price" id="min-price" value="0">
-                        <label class="filter-range" for="max-price">ДО</label>
-                        <input type="text" name="max-price" id="max-price" value="15000">
+                    <fieldset class="filter-item controls">
+                        <legend>Стоимость:</legend>
+                        <div class="range-filter">
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="toggle toggle-min"></div>
+                                <div class="toggle toggle-max"></div>
+                            </div>
+                            <div class="price-controls">
+                                <label class="min-price">от <input name="min-price" type="number" value="0"></label>
+                                <label class="max-price">до <input name="max-price" type="number" value="15000"></label>
+                            </div>`
+                        </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="filter-item options">
                         <legend>Сетка:</legend>
-                        <ul class="filter-option">
-                            <li class="filter-item">
+                        <ul class="filter-list">
+                            <li class="filter-option">
                                 <input type="radio" name="value-grid" value="adaptive" id="filter-adaptive" checked>
                                 <label for="filter-adaptive">Адаптивная</label>
                             </li>
-                            <li class="filter-item">
+                            <li class="filter-option">
                                 <input type="radio" name="value-grid" value="fixed" id="filter-fixed">
                                 <label for="filter-fixed">Фиксированная</label>
                             </li>
-                            <li class="filter-item">
+                            <li class="filter-option">
                                 <input type="radio" name="value-grid" value="rubber" id="filter-rubber">
                                 <label for="filter-rubber">Резиновая</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="filter-item advantages">
                         <legend>ОСОБЕННОСТИ:</legend>
                         <ul class="filter-advantages">
                             <li>
@@ -173,6 +182,12 @@
             </section>
         </section>
 
+
+
+        <!-- Другие элементы формы -->
+
+        </form>
+
     </main>
     <footer class="main-footer">
 
@@ -241,6 +256,7 @@
             <button class="btn btn-red" type="submit">ОТПРАВИТЬ</button>
         </form>
     </section>
+
 
 </body>
 
