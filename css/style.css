@@ -53,8 +53,8 @@
         width: 1px;
         height: 1px;
         margin: -1px;
-        border: 0;
         padding: 0;
+        border: 0;
         white-space: nowrap;
         clip-path: inset(100%);
         clip: rect(0 0 0 0);
@@ -68,8 +68,9 @@
     
     .btn {
         display: inline-block;
-        padding: 16px 0;
+        vertical-align: middle;
         height: 50px;
+        padding: 16px 0;
         font-size: 16px;
         line-height: 18px;
         font-weight: 500;
@@ -375,7 +376,6 @@
         font-weight: 500;
         line-height: 45px;
         color: #000000;
-        letter-spacing: normal;
     }
     
     .about-us-advantages p {
@@ -389,7 +389,9 @@
     .about-us-advantages h3 {
         margin-top: 39px;
         margin-bottom: 0;
+        font-size: 16px;
         font-weight: 700;
+        line-height: 24px;
         color: #000000;
         text-transform: uppercase;
     }
@@ -551,6 +553,10 @@
     .contacts p {
         margin: 0;
         padding-top: 20px;
+    }
+    
+    .contacts-tel {
+        color: #666666;
     }
     
     .contacts address {
@@ -843,7 +849,7 @@
         display: none;
     }
     
-    .catalog-list li:hover .catalog-info {
+    li:hover .catalog-info {
         position: relative;
         bottom: 238px;
         display: flex;
@@ -909,6 +915,7 @@
         width: 50px;
         height: 50px;
         background-color: #eeeeee;
+        border-radius: 5px;
     }
     
     .pagination-item a {
@@ -1009,6 +1016,7 @@
     
     .price-controls label {
         display: inline-block;
+        vertical-align: middle;
         width: 50%;
         font-size: 16px;
         text-transform: uppercase;
