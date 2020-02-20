@@ -715,7 +715,7 @@
         margin-bottom: 35px;
     }
     
-    .sort-llist {
+    .sort-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -736,19 +736,19 @@
         list-style: none;
     }
     
-    .sort-list-arrow a {
+    .icon-arrow {
         opacity: 0.2;
         fill: #a6a6a6;
     }
     
-    .sort-list-arrow a:hover,
-    .sort-list-arrow a:focus {
+    .icon-arrow:hover,
+    .icon-arrow:focus {
         opacity: 1;
     }
     
-    .sort-list-arrow a:active,
-    .sort-list-arrow a:visited {
-        fill: black;
+    .icon-arrow:active {
+        opacity: 1;
+        fill: #231F20;
     }
     
     .sort h3 {
@@ -761,7 +761,7 @@
         color: #000000;
     }
     
-    .sort-llist a {
+    .sort-list a {
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;
@@ -769,13 +769,14 @@
         color: rgba(0, 0, 0, 0.3);
     }
     
-    .sort-llist a:hover,
-    .sort-llist a:focus {
+    .sort-list a:hover,
+    .sort-list a:focus {
         color: rgba(0, 0, 0, 0.6);
     }
     
-    .sort-llist a:active,
-    .sort-llist a:visited {
+    .sort-list a:active,
+    .sort-list a:visited,
+    .sort-list .link-visited {
         color: #000000;
     }
     /*catalog*/
@@ -886,6 +887,7 @@
         height: 50px;
         background-color: #eeeeee;
         border-radius: 5px;
+        text-transform: uppercase;
     }
     
     .pagination-item a {
@@ -893,9 +895,10 @@
         height: 50px;
     }
     
-    .pagination-list a {
-        font-size: 13.5px;
-        line-height: 15.5px;
+    .pagination-list a,
+    .pagination-item a {
+        font-size: 16px;
+        line-height: 18px;
         font-weight: 500;
         color: #000000;
     }
@@ -945,7 +948,7 @@
         padding-top: 39px;
         padding-right: 20px;
         padding-left: 20px;
-        background-color: #f1f1f1;
+        background-color: #eeeeee;
         border-radius: 5px;
     }
     
@@ -968,7 +971,7 @@
         height: 20px;
         padding: 0;
         border: 8px solid #ffffff;
-        background-color: #ababab;
+        background-color: #eeeeee;
         box-shadow: 0 2px 1px 0 #cfcfcf;
         border-radius: 50%;
         cursor: pointer;
@@ -1016,88 +1019,97 @@
     .filter-list {
         margin-top: 16px;
         margin-bottom: 46px;
-        padding-left: 36px;
+        padding-left: 0;
     }
     
     .filter-list li:not(:first-child) {
         padding-top: 16px;
     }
     
-    .filter-adaptive {
-        position: relative;
-    }
-    
-    input[type="radio"] {
+    input[type=radio] {
         display: none;
     }
     
-    input[type="radio"]+.radio-indicator {
+    input[type="radio"]+label {
+        position: relative;
+        padding-left: 37px;
+        padding-top: 4px;
+        cursor: pointer;
+    }
+    
+    input[type="radio"]+label::before {
+        content: '';
         position: absolute;
-        left: 180px;
-        width: 25px;
+        top: 0;
+        left: 0;
         height: 25px;
+        width: 25px;
         background: url(../img/radio-off.svg) no-repeat;
-    }
-    
-    input[type="radio"]:checked+.radio-indicator {
-        background: url(../img/radio-on.svg) no-repeat;
-    }
-    
-    input[type="radio"]:disabled+.radio-indicator {
-        opacity: 0.1;
-    }
-    
-    .filter-option .radio-indicator {
+        cursor: pointer;
         opacity: 0.4;
     }
     
-    .filter-option:hover .radio-indicator,
-    .filter-option:focus .radio-indicator {
+    input[type="radio"]:checked+label::before {
+        background: url(../img/radio-on.svg) no-repeat;
+    }
+    
+    input[type="radio"]:hover+label::before,
+    input[type="radio"]:focus+label::before {
         opacity: 1;
     }
-    /* asddas */
+    
+    input[type="radio"]:checked:disabled+label::before,
+    input[type="radio"]:disabled+label::before {
+        opacity: 0.1;
+    }
     
     .filter-list-advantages {
-        margin-top: 18px;
-        margin-bottom: 46px;
-        padding-left: 37px;
+        margin-top: 16px;
+        margin-bottom: 50px;
+        padding-left: 0;
     }
     
     .filter-list-advantages li:not(:first-child) {
         padding-top: 16px;
     }
     
-    .filter-slide {
-        position: relative;
-    }
-    
-    input[type="checkbox"] {
+    input[type=checkbox] {
         display: none;
     }
     
-    input[type="checkbox"]+.checkbox-indicator {
+    input[type="checkbox"]+label {
+        position: relative;
+        padding-left: 37px;
+        padding-top: 1px;
+        cursor: pointer;
+    }
+    
+    input[type="checkbox"]+label::before {
+        content: '';
         position: absolute;
-        left: 180px;
-        width: 27px;
+        top: 0;
+        left: 0;
         height: 23px;
+        width: 23px;
         background: url(../img/checkbox-off.svg) no-repeat;
-    }
-    
-    input[type="checkbox"]:checked+.checkbox-indicator {
-        background: url(../img/checkbox-on.svg) no-repeat;
-    }
-    
-    input[type="checkbox"]:disabled+.checkbox-indicator {
-        opacity: 0.1;
-    }
-    
-    .filter-advantages .checkbox-indicator {
+        cursor: pointer;
         opacity: 0.4;
     }
     
-    .filter-advantages:hover .checkbox-indicator,
-    .filter-advantages:focus .checkbox-indicator {
+    input[type="checkbox"]:checked+label::before {
+        height: 23px;
+        width: 27px;
+        background: url(../img/checkbox-on.svg) no-repeat;
+    }
+    
+    input[type="checkbox"]:hover+label::before,
+    input[type="checkbox"]:focus+label::before {
         opacity: 1;
+    }
+    
+    input[type="checkbox"]:checked:disabled+label::before,
+    input[type="checkbox"]:disabled+label::before {
+        opacity: 0.1;
     }
     
     .btn-advantages {
