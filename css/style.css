@@ -583,6 +583,7 @@
     .footer-social {
         display: flex;
         align-items: center;
+        margin-bottom: 69px;
     }
     
     .social {
@@ -645,58 +646,13 @@
         line-height: 22px;
         color: #444444;
     }
-    /*feedback*/
-    
-    .feedback h2 {
-        font-size: 45px;
-        font-weight: 400;
-        line-height: 45px;
-        color: #000000;
-    }
-    
-    .feedback label {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 18px;
-        color: #000000;
-    }
-    
-    .feedback-form input[type="text"],
-    .feedback-form input[type="email"],
-    .feedback-form textarea {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 18px;
-        color: rgba(68, 68, 68, 0.5);
-        background-color: #ffffff;
-        border: solid 2px #d7dcde;
-    }
-    
-    .feedback-form input[type="text"]:hover,
-    .feedback-form input[type="email"]:hover,
-    .feedback-form textarea:hover {
-        border: solid 2px #b4b9bb;
-    }
-    
-    .feedback-form input[type="text"]:focus,
-    .feedback-form input[type="email"]:focus,
-    .feedback-form textarea:focus {
-        color: #444444;
-        border: solid 2px #000000;
-    }
-    
-    .feedback-form input[type="text"]:not(:placeholder-shown):invalid,
-    .feedback-form input[type="email"]:not(:placeholder-shown):invalid {
-        color: #e74246;
-        border: solid 2px #e74246;
-    }
     /*Страница catalog.html*/
     
     .inner-page .main-header {
         display: flex;
         flex-direction: column;
         height: 355px;
-        margin-bottom: 52px;
+        margin-bottom: 53px;
     }
     
     .catalog-heiding {
@@ -778,6 +734,21 @@
         padding: 0;
         width: 40px;
         list-style: none;
+    }
+    
+    .sort-list-arrow a {
+        opacity: 0.2;
+        fill: #a6a6a6;
+    }
+    
+    .sort-list-arrow a:hover,
+    .sort-list-arrow a:focus {
+        opacity: 1;
+    }
+    
+    .sort-list-arrow a:active,
+    .sort-list-arrow a:visited {
+        fill: black;
     }
     
     .sort h3 {
@@ -939,7 +910,7 @@
         background-color: #ffffff;
     }
     
-    .pagination-list li:active {
+    .pagination-list a:active {
         color: rgba(0, 0, 0, 0.3);
         box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
         background-color: #d5d5d5;
@@ -955,10 +926,12 @@
     
     .range-filter {
         width: 260px;
-        margin-top: 50px;
+        margin-top: 51px;
+        margin-bottom: 33px;
     }
     
     .filter-item legend {
+        padding: 0;
         font-size: 18px;
         line-height: 24px;
         text-transform: uppercase;
@@ -1001,6 +974,10 @@
         cursor: pointer;
     }
     
+    .max-price {
+        padding-left: 14px;
+    }
+    
     .range-controls .toggle-min {
         left: 18px;
     }
@@ -1022,19 +999,257 @@
     }
     
     .price-controls input {
+        box-sizing: border-box;
         width: 80px;
         height: 38px;
-        margin-left: 10px;
-        padding: 7px 10px;
-        font-family: Roboto, Arial, sans-serif;
+        margin-left: 8px;
+        padding-left: 17px;
+        font-family: "Roboto", Arial, sans-serif;
         font-size: 16px;
         text-align: center;
         color: #283136;
         border: none;
         border-radius: 5px;
-        background: #f1f1f1;
+        background: #eeeeee;
     }
     
-    .max-price {
-        text-align: right;
+    .filter-list {
+        margin-top: 16px;
+        margin-bottom: 46px;
+        padding-left: 36px;
+    }
+    
+    .filter-list li:not(:first-child) {
+        padding-top: 16px;
+    }
+    
+    .filter-adaptive {
+        position: relative;
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+    
+    input[type="radio"]+.radio-indicator {
+        position: absolute;
+        left: 180px;
+        width: 25px;
+        height: 25px;
+        background: url(../img/radio-off.svg) no-repeat;
+    }
+    
+    input[type="radio"]:checked+.radio-indicator {
+        background: url(../img/radio-on.svg) no-repeat;
+    }
+    
+    input[type="radio"]:disabled+.radio-indicator {
+        opacity: 0.1;
+    }
+    
+    .filter-option .radio-indicator {
+        opacity: 0.4;
+    }
+    
+    .filter-option:hover .radio-indicator,
+    .filter-option:focus .radio-indicator {
+        opacity: 1;
+    }
+    /* asddas */
+    
+    .filter-list-advantages {
+        margin-top: 18px;
+        margin-bottom: 46px;
+        padding-left: 37px;
+    }
+    
+    .filter-list-advantages li:not(:first-child) {
+        padding-top: 16px;
+    }
+    
+    .filter-slide {
+        position: relative;
+    }
+    
+    input[type="checkbox"] {
+        display: none;
+    }
+    
+    input[type="checkbox"]+.checkbox-indicator {
+        position: absolute;
+        left: 180px;
+        width: 27px;
+        height: 23px;
+        background: url(../img/checkbox-off.svg) no-repeat;
+    }
+    
+    input[type="checkbox"]:checked+.checkbox-indicator {
+        background: url(../img/checkbox-on.svg) no-repeat;
+    }
+    
+    input[type="checkbox"]:disabled+.checkbox-indicator {
+        opacity: 0.1;
+    }
+    
+    .filter-advantages .checkbox-indicator {
+        opacity: 0.4;
+    }
+    
+    .filter-advantages:hover .checkbox-indicator,
+    .filter-advantages:focus .checkbox-indicator {
+        opacity: 1;
+    }
+    
+    .btn-advantages {
+        width: 260px;
+    }
+    /* Всплывающая форма */
+    
+    .modal {
+        position: fixed;
+        color: #000000;
+        background-color: #ffffff;
+        background-position: 0 0;
+        box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+    }
+    
+    .modal-feedback {
+        bottom: 80px;
+        left: 50%;
+        width: 960px;
+        margin-left: -480px;
+        padding: 73px 100px 0px;
+    }
+    
+    .modal-close {
+        position: absolute;
+        top: 78px;
+        right: 93px;
+        width: 21px;
+        height: 21px;
+        border: 0;
+        cursor: pointer;
+        background-color: #ffffff;
+        border: none;
+        opacity: 0.3;
+    }
+    
+    .modal-close:hover,
+    .modal-close:focus {
+        opacity: 1;
+    }
+    
+    .modal-close:active {
+        opacity: 0.1;
+    }
+    
+    .modal-close::before,
+    .modal-close::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 1px;
+        width: 26px;
+        height: 3px;
+        background-color: #fb565a;
+    }
+    
+    .modal-close::before {
+        transform: rotate(45deg);
+    }
+    
+    .modal-close::after {
+        transform: rotate(-45deg);
+    }
+    
+    .feedback-form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .feedback-form h2 {
+        margin: 0;
+        margin-bottom: 40px;
+        padding-right: 200px;
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 45px;
+        color: #000000;
+    }
+    
+    .feedback-form p {
+        margin: 0;
+        margin-top: 10;
+        margin-bottom: 33px;
+    }
+    
+    .feedback-form label {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        color: #000000;
+    }
+    
+    .feedback-form p:last-of-type {
+        margin: 0;
+        margin-bottom: 40px;
+    }
+    
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"] {
+        box-sizing: border-box;
+        width: 360px;
+        margin-top: 10px;
+        padding-top: 14px;
+        padding-bottom: 15px;
+        padding-left: 12px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        color: rgba(68, 68, 68, 0.5);
+        background-color: #ffffff;
+        border: solid 2px #d7dcde;
+    }
+    
+    .feedback-form textarea {
+        box-sizing: border-box;
+        width: 760px;
+        margin-top: 10px;
+        padding-top: 12px;
+        padding-bottom: 15px;
+        padding-left: 12px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        color: rgba(68, 68, 68, 0.5);
+        background-color: #ffffff;
+        border: solid 2px #d7dcde;
+    }
+    
+    .feedback-form input[type="text"]:hover,
+    .feedback-form input[type="email"]:hover,
+    .feedback-form textarea:hover {
+        border: solid 2px #b4b9bb;
+    }
+    
+    .feedback-form input[type="text"]:focus,
+    .feedback-form input[type="email"]:focus,
+    .feedback-form textarea:focus {
+        color: #444444;
+        border: solid 2px #000000;
+    }
+    
+    .feedback-form input[type="text"]:not(:placeholder-shown):invalid,
+    .feedback-form input[type="email"]:not(:placeholder-shown):invalid {
+        color: #e74246;
+        border: solid 2px #e74246;
+    }
+    
+    .btn-feedback {
+        width: 260px;
+        margin-bottom: 84px;
     }
