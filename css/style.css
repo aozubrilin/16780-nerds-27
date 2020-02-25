@@ -61,7 +61,7 @@ input[type="radio"].visually-hidden {
 .btn {
     display: inline-block;
     vertical-align: middle;
-    height: 50px;
+    min-height: 50px;
     padding: 17px 0;
     font-size: 16px;
     line-height: 18px;
@@ -156,7 +156,7 @@ input[type="radio"].visually-hidden {
 /* Page index */
 
 .main-header {
-    height: 545px;
+    min-height: 545px;
     margin-bottom: 80px;
     background-color: #eeeeee;
 }
@@ -192,9 +192,16 @@ input[type="radio"].visually-hidden {
 
 .site-navigation {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     width: 438px;
+}
+
+.site-navigation li:not(:nth-of-type(4n)) {
+    display: block;
+    margin-right: 47px;
 }
 
 .cart-navigation {
@@ -278,6 +285,10 @@ input[type="radio"].visually-hidden {
     color: #000000;
 }
 
+.slider btn {
+    padding-bottom: 80px;
+}
+
 .slider-item-1::after,
 .slider-item-2::after,
 .slider-item-3::after {
@@ -306,7 +317,7 @@ input[type="radio"].visually-hidden {
 
 .slider-item-3::after {
     right: 0px;
-    bottom: -65px;
+    top: -57px;
     width: 759px;
     height: 411px;
     background-color: #b0e0ee;
@@ -318,7 +329,7 @@ input[type="radio"].visually-hidden {
 
 .slider-dots {
     position: absolute;
-    bottom: 11px;
+    top: 239px;
     left: 536px;
     margin: 0;
     padding: 0;
@@ -360,7 +371,7 @@ input[type="radio"].visually-hidden {
 /* features */
 
 .features {
-    padding-bottom: 80px;
+    padding-bottom: 78px;
     border-bottom: 2px solid #eeeeee;
 }
 
@@ -604,7 +615,7 @@ input[type="radio"].visually-hidden {
 
 .map-contacts {
     width: 318px;
-    height: 308px;
+    min-height: 308px;
     position: absolute;
     top: 54px;
     padding-top: 25px;
@@ -719,7 +730,7 @@ input[type="radio"].visually-hidden {
 /* Page Catalog */
 
 .inner-page .main-header {
-    height: 355px;
+    min-height: 355px;
     margin-bottom: 53px;
 }
 
@@ -800,7 +811,7 @@ input[type="radio"].visually-hidden {
 .range-filter {
     width: 261px;
     margin-top: 48px;
-    margin-bottom: 30px;
+    margin-bottom: 54px;
 }
 
 .range-controls {
@@ -868,7 +879,6 @@ input[type="radio"].visually-hidden {
     width: 80px;
     height: 38px;
     margin-left: 8px;
-    padding-left: 17px;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     text-align: center;
@@ -876,17 +886,18 @@ input[type="radio"].visually-hidden {
     border: none;
     border-radius: 5px;
     background: #eeeeee;
-    appearance: none;
 }
 
-.price-controls input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.price-controls input[type=number]::-webkit-outer-spin-button,
+.price-controls input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    appearance: none;
     margin: 0;
 }
 
 .price-controls input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 
@@ -959,6 +970,7 @@ input::-webkit-inner-spin-button {
     left: -35px;
     width: 23px;
     height: 23px;
+    background-color: #a6a6a6;
     background: url(../img/checkbox-off.svg) no-repeat;
     user-select: none;
     opacity: 0.4;
@@ -971,6 +983,7 @@ input::-webkit-inner-spin-button {
     left: -35px;
     width: 27px;
     height: 23px;
+    background-color: #a6a6a6;
     background: url(../img/checkbox-on.svg) no-repeat;
     user-select: none;
     opacity: 0.4;
@@ -1006,6 +1019,7 @@ input::-webkit-inner-spin-button {
 
 .sort-list-arrow {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
@@ -1097,6 +1111,7 @@ input::-webkit-inner-spin-button {
     margin: 0;
     text-align: center;
     background-color: #eeeeee;
+    overflow: auto;
 }
 
 .catalog-item:hover .catalog-info,
@@ -1166,7 +1181,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
+    min-width: 50px;
     height: 50px;
     margin-right: 11px;
     background-color: #eeeeee;
@@ -1175,7 +1190,7 @@ input::-webkit-inner-spin-button {
 }
 
 .pagination-item a {
-    width: 260px;
+    min-width: 260px;
     height: 50px;
 }
 
