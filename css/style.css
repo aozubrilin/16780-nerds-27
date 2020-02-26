@@ -195,13 +195,11 @@ input[type="radio"].visually-hidden {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
-    width: 440px;
+    width: 439px;
 }
 
 .site-navigation li:not(:nth-of-type(4n)) {
-    display: block;
-    margin-right: 46px;
+    margin-right: 47px;
 }
 
 .cart-navigation {
