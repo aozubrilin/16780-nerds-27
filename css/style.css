@@ -196,12 +196,12 @@ input[type="radio"].visually-hidden {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    width: 438px;
+    width: 440px;
 }
 
 .site-navigation li:not(:nth-of-type(4n)) {
     display: block;
-    margin-right: 47px;
+    margin-right: 46px;
 }
 
 .cart-navigation {
