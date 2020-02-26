@@ -59,7 +59,6 @@ window.addEventListener("keydown", function(evt) {
 });
 
 //slider
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
