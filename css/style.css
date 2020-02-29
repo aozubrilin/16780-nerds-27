@@ -289,9 +289,11 @@ input[type="radio"].visually-hidden {
 }
 .slider-item-2 {
     width: 525px;
+    display: none;
 }
 .slider-item-3 {
     width: 420px;
+    display: none;
 }
 .slider-item-1::after,
 .slider-item-2::after,
@@ -1099,9 +1101,6 @@ li:hover .icon-arrow-up,
 li:focus .icon-arrow-up {
     opacity: 1;
 }
-
-
-   
 
 .sort h2 {
     margin: 0;
